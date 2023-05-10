@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Example</title>
+</head>
+<body>
+	<h1>Button Example</h1>
+	
+	<button onclick="addButton(1);">Acolyte</button>
+	<button onclick="addButton(2);">Neophyte</button>
+  <button onclick="addButton(3);">Apprentice</button>
+  <button onclick="addButton(4);">Lord</button>
+  <button onclick="addButton(5);">Darth</button>
+	<br><br>
+	<div id="buttons">
+	</div>
+
+  <p >Points: <p style="display: inline;" id="used"></p>/<p style="display: inline;" id="available"></p></p>
+
+  <div id="STR">
+    <p>
+    <button id="strREM">-</button>
+    STR: <span id="STRlevel"></span> (<span id="STRmod"></span>)
+    <button id="strADD">+</button>
+    </p>
+  </div>
+  <div id="DEX">
+    <p>
+    <button id="dexREM">-</button>
+    DEX: <span id="DEXlevel"></span> (<span id="DEXmod"></span>)
+    <button id="dexADD">+</button>
+    </p>
+  </div>
+  <div id="CON">
+    <p>
+    <button id="conREM">-</button>
+    CON: <span id="CONlevel"></span> (<span id="CONmod"></span>)
+    <button id="conADD">+</button>
+    </p>
+  </div>
+  <div id="INT">
+    <p>
+    <button id="intREM">-</button>
+    INT: <span id="INTlevel"></span> (<span id="INTmod"></span>)
+    <button id="intADD">+</button>
+    </p>
+  </div>
+  <div id="WIL">
+    <p>
+    <button id="wilREM">-</button>
+    WIL: <span id="WILlevel"></span> (<span id="WILmod"></span>)
+    <button id="wilADD">+</button>
+    </p>
+  </div>
+  <div id="CHA">
+    <p>
+    <button id="chaREM">-</button>
+    CHA: <span id="CHAlevel"></span> (<span id="CHAmod"></span>)
+    <button id="chaADD">+</button>
+    </p>
+  </div>
+
+  <div id="otherStats">
+    <p>HP: <span id="hp"></span></p>
+    <p>DEFENSE: <span id="def"></span> + Bonuses</p>
+    <p>RESISTANCE: <span id="res"></span></p>
+    <p>INITIATIVE: <span id="ini"></span> + Force Sense</p>
+  </div>
+
+  <script defer src="buttons.js"></script>
+</body>
+</html>
