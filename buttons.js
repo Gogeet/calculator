@@ -350,6 +350,12 @@ function changeLevel(stat, add) {
     }
   }
 
+  if(used > available) {
+    USoutput.style.color = "red";
+  } else {
+    USoutput.style.color = "black";
+  }
+
   USoutput.textContent = used;
 
   STRlevel.textContent = lvls[0];
@@ -447,6 +453,31 @@ chaREM.onclick = function() {
 }
 
 function addButton(number) {
+  buttonAco1.style.display = 'none';
+  buttonAco2.style.display = 'none';
+  buttonAco3.style.display = 'none';
+  buttonAco4.style.display = 'none';
+  buttonAco5.style.display = 'none';
+
+  buttonNeo1.style.display = 'none';
+  buttonNeo2.style.display = 'none';
+  buttonNeo3.style.display = 'none';
+
+  buttonApp1.style.display = 'none';
+  buttonApp2.style.display = 'none';
+  buttonApp3.style.display = 'none';
+  buttonApp4.style.display = 'none';
+  buttonApp5.style.display = 'none';
+
+  buttonLor1.style.display = 'none';
+  buttonLor2.style.display = 'none';
+  buttonLor3.style.display = 'none';
+  buttonLor4.style.display = 'none';
+  buttonLor5.style.display = 'none';
+
+  buttonDar1.style.display = 'none';
+  buttonDar2.style.display = 'none';
+  buttonDar3.style.display = 'none';
   switch (number) {
     case 1:
       buttonAco1.style.display = 'inline-block';
@@ -454,135 +485,31 @@ function addButton(number) {
       buttonAco3.style.display = 'inline-block';
       buttonAco4.style.display = 'inline-block';
       buttonAco5.style.display = 'inline-block';
-
-      buttonNeo1.style.display = 'none';
-      buttonNeo2.style.display = 'none';
-      buttonNeo3.style.display = 'none';
-
-      buttonApp1.style.display = 'none';
-      buttonApp2.style.display = 'none';
-      buttonApp3.style.display = 'none';
-      buttonApp4.style.display = 'none';
-      buttonApp5.style.display = 'none';
-
-      buttonLor1.style.display = 'none';
-      buttonLor2.style.display = 'none';
-      buttonLor3.style.display = 'none';
-      buttonLor4.style.display = 'none';
-      buttonLor5.style.display = 'none';
-
-      buttonDar1.style.display = 'none';
-      buttonDar2.style.display = 'none';
-      buttonDar3.style.display = 'none';
       break;
 
     case 2:
-      buttonAco1.style.display = 'none';
-      buttonAco2.style.display = 'none';
-      buttonAco3.style.display = 'none';
-      buttonAco4.style.display = 'none';
-      buttonAco5.style.display = 'none';
-
       buttonNeo1.style.display = 'inline-block';
       buttonNeo2.style.display = 'inline-block';
       buttonNeo3.style.display = 'inline-block';
-
-      buttonApp1.style.display = 'none';
-      buttonApp2.style.display = 'none';
-      buttonApp3.style.display = 'none';
-      buttonApp4.style.display = 'none';
-      buttonApp5.style.display = 'none';
-
-      buttonLor1.style.display = 'none';
-      buttonLor2.style.display = 'none';
-      buttonLor3.style.display = 'none';
-      buttonLor4.style.display = 'none';
-      buttonLor5.style.display = 'none';
-
-      buttonDar1.style.display = 'none';
-      buttonDar2.style.display = 'none';
-      buttonDar3.style.display = 'none';
       break;
 
     case 3:
-      buttonAco1.style.display = 'none';
-      buttonAco2.style.display = 'none';
-      buttonAco3.style.display = 'none';
-      buttonAco4.style.display = 'none';
-      buttonAco5.style.display = 'none';
-
-      buttonNeo1.style.display = 'none';
-      buttonNeo2.style.display = 'none';
-      buttonNeo3.style.display = 'none';
-
       buttonApp1.style.display = 'inline-block';
       buttonApp2.style.display = 'inline-block';
       buttonApp3.style.display = 'inline-block';
       buttonApp4.style.display = 'inline-block';
       buttonApp5.style.display = 'inline-block';
-
-      buttonLor1.style.display = 'none';
-      buttonLor2.style.display = 'none';
-      buttonLor3.style.display = 'none';
-      buttonLor4.style.display = 'none';
-      buttonLor5.style.display = 'none';
-
-      buttonDar1.style.display = 'none';
-      buttonDar2.style.display = 'none';
-      buttonDar3.style.display = 'none';
       break;
 
     case 4:
-      buttonAco1.style.display = 'none';
-      buttonAco2.style.display = 'none';
-      buttonAco3.style.display = 'none';
-      buttonAco4.style.display = 'none';
-      buttonAco5.style.display = 'none';
-
-      buttonNeo1.style.display = 'none';
-      buttonNeo2.style.display = 'none';
-      buttonNeo3.style.display = 'none';
-
-      buttonApp1.style.display = 'none';
-      buttonApp2.style.display = 'none';
-      buttonApp3.style.display = 'none';
-      buttonApp4.style.display = 'none';
-      buttonApp5.style.display = 'none';
-
       buttonLor1.style.display = 'inline-block';
       buttonLor2.style.display = 'inline-block';
       buttonLor3.style.display = 'inline-block';
       buttonLor4.style.display = 'inline-block';
       buttonLor5.style.display = 'inline-block';
-
-      buttonDar1.style.display = 'none';
-      buttonDar2.style.display = 'none';
-      buttonDar3.style.display = 'none';
       break;
 
     default:
-      buttonAco1.style.display = 'none';
-      buttonAco2.style.display = 'none';
-      buttonAco3.style.display = 'none';
-      buttonAco4.style.display = 'none';
-      buttonAco5.style.display = 'none';
-
-      buttonNeo1.style.display = 'none';
-      buttonNeo2.style.display = 'none';
-      buttonNeo3.style.display = 'none';
-
-      buttonApp1.style.display = 'none';
-      buttonApp2.style.display = 'none';
-      buttonApp3.style.display = 'none';
-      buttonApp4.style.display = 'none';
-      buttonApp5.style.display = 'none';
-
-      buttonLor1.style.display = 'none';
-      buttonLor2.style.display = 'none';
-      buttonLor3.style.display = 'none';
-      buttonLor4.style.display = 'none';
-      buttonLor5.style.display = 'none';
-
       buttonDar1.style.display = 'inline-block';
       buttonDar2.style.display = 'inline-block';
       buttonDar3.style.display = 'inline-block';
