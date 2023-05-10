@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SWTOR Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Skill points calculator</h1>
+	
+	<button onclick="addButton(1);">Acolyte</button>
+	<button onclick="addButton(2);">Neophyte</button>
+  <button onclick="addButton(3);">Apprentice</button>
+  <button onclick="addButton(4);">Lord</button>
+  <button onclick="addButton(5);">Darth</button>
+	<br><br>
+	<div id="buttons">
+	</div>
+
+  <p><span id="rank"></span> | Points: <span id="used"></span>/<span id="available"></span></p>
+
+  <table>
+    <tr>
+      <td>
+        <button id="strREM">-</button>
+      </td>
+      <td class="text">
+        STR: <span id="STRlevel"></span> (<span id="STRmod"></span>)
+      </td>
+      <td>
+        <button id="strADD">+</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="dexREM">-</button>
+      </td>
+      <td class="text">
+        STR: <span id="DEXlevel"></span> (<span id="DEXmod"></span>)
+      </td>
+      <td>
+        <button id="dexADD">+</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="conREM">-</button>
+      </td>
+      <td class="text">
+        STR: <span id="CONlevel"></span> (<span id="CONmod"></span>)
+      </td>
+      <td>
+        <button id="conADD">+</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="intREM">-</button>
+      </td>
+      <td class="text">
+        STR: <span id="INTlevel"></span> (<span id="INTmod"></span>)
+      </td>
+      <td>
+        <button id="intADD">+</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="wilREM">-</button>
+      </td>
+      <td class="text">
+        STR: <span id="WILlevel"></span> (<span id="WILmod"></span>)
+      </td>
+      <td>
+        <button id="wilADD">+</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="chaREM">-</button>
+      </td>
+      <td class="text">
+        STR: <span id="CHAlevel"></span> (<span id="CHAmod"></span>)
+      </td>
+      <td>
+        <button id="chaADD">+</button>
+      </td>
+    </tr>
+  </table>
+
+  <div id="otherStats">
+    <p>HP: <span id="hp"></span></p>
+    <p>DEFENSE: <span id="def"></span> + Bonuses</p>
+    <p>RESISTANCE: <span id="res"></span></p>
+    <p>INITIATIVE: <span id="ini"></span> + Force Sense</p>
+  </div>
+
+  <script defer src="buttons.js"></script>
+</body>
+</html>
