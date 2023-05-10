@@ -3,6 +3,8 @@ var rankOutput = document.getElementById("rank");
 
 var used = 0;
 var available = 0;
+var AVoutput = document.getElementById("available");
+var USoutput = document.getElementById("used");
 
 var index = [0, 0, 0, 0, 0, 0];
 var lvls = [8, 8, 8, 8, 8, 8];
@@ -16,14 +18,12 @@ var EHP = 0;
 var DEF = 0;
 var INI = 0;
 var RES = 0;
-
 var EHPoutput = document.getElementById("hp");
 var DEFoutput = document.getElementById("def");
 var RESoutput = document.getElementById("res");
 var INIoutput = document.getElementById("ini");
 
-var AVoutput = document.getElementById("available");
-var USoutput = document.getElementById("used");
+
 
 USoutput.textContent = used;
 AVoutput.textContent = available;
@@ -142,196 +142,173 @@ var buttonDar3 = document.createElement("button");
 buttonAco1.onclick = function() { 
   available = 10;
   THP = 5;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Acolyte I";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonAco2.onclick = function() { 
   available = 14;
   THP = 5;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Acolyte II";
-  rankOutput.textContent = rank;
+
+  generalOutput();
 };
 buttonAco3.onclick = function() { 
   available = 18;
   THP = 5;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Acolyte III";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonAco4.onclick = function() { 
   available = 22;
   THP = 5;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Acolyte IV";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonAco5.onclick = function() { 
   available = 25;
   THP = 5;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Acolyte V";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 
 buttonNeo1.onclick = function() { 
   available = 27;
   THP = 10;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Neophyte I";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonNeo2.onclick = function() { 
   available = 30;
   THP = 10;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Neophyte II";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonNeo3.onclick = function() { 
   available = 35;
   THP = 10;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Neophyte III";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 
 buttonApp1.onclick = function() { 
   available = 38;
   THP = 10;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Apprentice I";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonApp2.onclick = function() { 
   available = 40;
   THP = 12;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Apprentice II";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonApp3.onclick = function() { 
   available = 43;
   THP = 13;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Apprentice III";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonApp4.onclick = function() { 
   available = 46;
   THP = 14;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Apprentice IV";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonApp5.onclick = function() { 
   available = 50;
   THP = 15;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Apprentice V";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 
 buttonLor1.onclick = function() { 
   available = 52;
   THP = 17;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Lord I";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonLor2.onclick = function() { 
   available = 58;
   THP = 19;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Lord II";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonLor3.onclick = function() { 
   available = 63;
   THP = 22;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Lord III";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonLor4.onclick = function() { 
   available = 68;
   THP = 23;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Lord IV";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonLor5.onclick = function() { 
   available = 72;
   THP = 25;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Lord V";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 
 buttonDar1.onclick = function() { 
   available = 75;
   THP = 30;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Darth I";
-  rankOutput.textContent = rank;
+
+  generalOutput();
 };
 buttonDar2.onclick = function() { 
   available = 80;
   THP = 35;
-  EHP = (THP + curmods[2]) * 4;
-  EHPoutput.textContent = EHP;
-  AVoutput.textContent = available;
   rank = "Darth II";
-  rankOutput.textContent = rank;
+  
+  generalOutput();
 };
 buttonDar3.onclick = function() { 
   available = 85;
   THP = 40;
+  rank = "Darth III";
+
+  generalOutput();
+
+};
+
+function generalOutput() {
+  if(used > available) {
+    USoutput.style.color = "red";
+  } else {
+    USoutput.style.color = "black";
+  }
+
+  USoutput.textContent = used;
+
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
+
   AVoutput.textContent = available;
-  rank = "Darth III";
+
   rankOutput.textContent = rank;
-};
+
+}
 
 function changeLevel(stat, add) {
   if(add) {
