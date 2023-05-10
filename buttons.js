@@ -1,9 +1,12 @@
+var rank = "Not selected";
+var rankOutput = document.getElementById("rank");
+
 var used = 0;
 var available = 0;
 
 var index = [0, 0, 0, 0, 0, 0];
 var lvls = [8, 8, 8, 8, 8, 8];
-var curmods = [-1, -1, -1, -1, -1, -1];
+var curmods = [1, -1, -1, -1, -1, -1];
 
 var cost = [1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6];
 var mods = [-1, -1, 0, 0, +1, +1, +2, +2, +3, +3, +4, +4, +5];
@@ -142,6 +145,8 @@ buttonAco1.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Acolyte I";
+  rankOutput.textContent = rank;
 };
 buttonAco2.onclick = function() { 
   available = 14;
@@ -149,6 +154,8 @@ buttonAco2.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Acolyte II";
+  rankOutput.textContent = rank;
 };
 buttonAco3.onclick = function() { 
   available = 18;
@@ -156,6 +163,8 @@ buttonAco3.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Acolyte III";
+  rankOutput.textContent = rank;
 };
 buttonAco4.onclick = function() { 
   available = 22;
@@ -163,6 +172,8 @@ buttonAco4.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Acolyte IV";
+  rankOutput.textContent = rank;
 };
 buttonAco5.onclick = function() { 
   available = 25;
@@ -170,6 +181,8 @@ buttonAco5.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Acolyte V";
+  rankOutput.textContent = rank;
 };
 
 buttonNeo1.onclick = function() { 
@@ -178,6 +191,8 @@ buttonNeo1.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Neophyte I";
+  rankOutput.textContent = rank;
 };
 buttonNeo2.onclick = function() { 
   available = 30;
@@ -185,6 +200,8 @@ buttonNeo2.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Neophyte II";
+  rankOutput.textContent = rank;
 };
 buttonNeo3.onclick = function() { 
   available = 35;
@@ -192,6 +209,8 @@ buttonNeo3.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Neophyte III";
+  rankOutput.textContent = rank;
 };
 
 buttonApp1.onclick = function() { 
@@ -200,6 +219,8 @@ buttonApp1.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Apprentice I";
+  rankOutput.textContent = rank;
 };
 buttonApp2.onclick = function() { 
   available = 40;
@@ -207,6 +228,8 @@ buttonApp2.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Apprentice II";
+  rankOutput.textContent = rank;
 };
 buttonApp3.onclick = function() { 
   available = 43;
@@ -214,6 +237,8 @@ buttonApp3.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Apprentice III";
+  rankOutput.textContent = rank;
 };
 buttonApp4.onclick = function() { 
   available = 46;
@@ -221,6 +246,8 @@ buttonApp4.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Apprentice IV";
+  rankOutput.textContent = rank;
 };
 buttonApp5.onclick = function() { 
   available = 50;
@@ -228,6 +255,8 @@ buttonApp5.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Apprentice V";
+  rankOutput.textContent = rank;
 };
 
 buttonLor1.onclick = function() { 
@@ -236,6 +265,8 @@ buttonLor1.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Lord I";
+  rankOutput.textContent = rank;
 };
 buttonLor2.onclick = function() { 
   available = 58;
@@ -243,6 +274,8 @@ buttonLor2.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Lord II";
+  rankOutput.textContent = rank;
 };
 buttonLor3.onclick = function() { 
   available = 63;
@@ -250,6 +283,8 @@ buttonLor3.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Lord III";
+  rankOutput.textContent = rank;
 };
 buttonLor4.onclick = function() { 
   available = 68;
@@ -257,6 +292,8 @@ buttonLor4.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Lord IV";
+  rankOutput.textContent = rank;
 };
 buttonLor5.onclick = function() { 
   available = 72;
@@ -264,6 +301,8 @@ buttonLor5.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Lord V";
+  rankOutput.textContent = rank;
 };
 
 buttonDar1.onclick = function() { 
@@ -272,6 +311,8 @@ buttonDar1.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Darth I";
+  rankOutput.textContent = rank;
 };
 buttonDar2.onclick = function() { 
   available = 80;
@@ -279,6 +320,8 @@ buttonDar2.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Darth II";
+  rankOutput.textContent = rank;
 };
 buttonDar3.onclick = function() { 
   available = 85;
@@ -286,6 +329,8 @@ buttonDar3.onclick = function() {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
   AVoutput.textContent = available;
+  rank = "Darth III";
+  rankOutput.textContent = rank;
 };
 
 function changeLevel(stat, add) {
@@ -569,6 +614,7 @@ function addButton(number) {
   document.getElementById("buttons").appendChild(buttonDar2);
   document.getElementById("buttons").appendChild(buttonDar3);
 };
+rankOutput.textContent = rank;
 
 EHPoutput.textContent = EHP;
 
