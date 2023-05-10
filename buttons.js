@@ -331,6 +331,8 @@ function generalOutput() {
   AVoutput.textContent = available;
 
   rankOutput.textContent = rank;
+  
+  INPoutput.textContent = INI + prof;
 
 }
 
