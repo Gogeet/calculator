@@ -1,6 +1,8 @@
 var rank = "Not selected";
 var rankOutput = document.getElementById("rank");
 
+var prof = 0;
+
 var used = 0;
 var available = 0;
 var AVoutput = document.getElementById("available");
@@ -22,6 +24,7 @@ var EHPoutput = document.getElementById("hp");
 var DEFoutput = document.getElementById("def");
 var RESoutput = document.getElementById("res");
 var INIoutput = document.getElementById("ini");
+var INPoutput = document.getElementById("iniProf")
 
 
 
@@ -143,12 +146,14 @@ buttonAco1.onclick = function() {
   available = 10;
   THP = 5;
   rank = "Acolyte I";
+  prof = 1;
   
   generalOutput();
 };
 buttonAco2.onclick = function() { 
   available = 14;
   THP = 5;
+  prof = 2;
   rank = "Acolyte II";
 
   generalOutput();
@@ -156,6 +161,7 @@ buttonAco2.onclick = function() {
 buttonAco3.onclick = function() { 
   available = 18;
   THP = 5;
+  prof = 2;
   rank = "Acolyte III";
   
   generalOutput();
@@ -163,6 +169,7 @@ buttonAco3.onclick = function() {
 buttonAco4.onclick = function() { 
   available = 22;
   THP = 5;
+  prof = 2;
   rank = "Acolyte IV";
   
   generalOutput();
@@ -170,6 +177,7 @@ buttonAco4.onclick = function() {
 buttonAco5.onclick = function() { 
   available = 25;
   THP = 5;
+  prof = 2;
   rank = "Acolyte V";
   
   generalOutput();
@@ -178,6 +186,7 @@ buttonAco5.onclick = function() {
 buttonNeo1.onclick = function() { 
   available = 27;
   THP = 10;
+  prof = 2;
   rank = "Neophyte I";
   
   generalOutput();
@@ -185,6 +194,7 @@ buttonNeo1.onclick = function() {
 buttonNeo2.onclick = function() { 
   available = 30;
   THP = 10;
+  prof = 2;
   rank = "Neophyte II";
   
   generalOutput();
@@ -192,6 +202,7 @@ buttonNeo2.onclick = function() {
 buttonNeo3.onclick = function() { 
   available = 35;
   THP = 10;
+  prof = 2;
   rank = "Neophyte III";
   
   generalOutput();
@@ -200,6 +211,7 @@ buttonNeo3.onclick = function() {
 buttonApp1.onclick = function() { 
   available = 38;
   THP = 10;
+  prof = 2;
   rank = "Apprentice I";
   
   generalOutput();
@@ -207,6 +219,7 @@ buttonApp1.onclick = function() {
 buttonApp2.onclick = function() { 
   available = 40;
   THP = 12;
+  prof = 2;
   rank = "Apprentice II";
   
   generalOutput();
@@ -214,6 +227,7 @@ buttonApp2.onclick = function() {
 buttonApp3.onclick = function() { 
   available = 43;
   THP = 13;
+  prof = 3;
   rank = "Apprentice III";
   
   generalOutput();
@@ -221,6 +235,7 @@ buttonApp3.onclick = function() {
 buttonApp4.onclick = function() { 
   available = 46;
   THP = 14;
+  prof = 3;
   rank = "Apprentice IV";
   
   generalOutput();
@@ -228,6 +243,7 @@ buttonApp4.onclick = function() {
 buttonApp5.onclick = function() { 
   available = 50;
   THP = 15;
+  prof = 3;
   rank = "Apprentice V";
   
   generalOutput();
@@ -236,6 +252,7 @@ buttonApp5.onclick = function() {
 buttonLor1.onclick = function() { 
   available = 52;
   THP = 17;
+  prof = 3;
   rank = "Lord I";
   
   generalOutput();
@@ -243,6 +260,7 @@ buttonLor1.onclick = function() {
 buttonLor2.onclick = function() { 
   available = 58;
   THP = 19;
+  prof = 4;
   rank = "Lord II";
   
   generalOutput();
@@ -250,6 +268,7 @@ buttonLor2.onclick = function() {
 buttonLor3.onclick = function() { 
   available = 63;
   THP = 22;
+  prof = 4;
   rank = "Lord III";
   
   generalOutput();
@@ -257,6 +276,7 @@ buttonLor3.onclick = function() {
 buttonLor4.onclick = function() { 
   available = 68;
   THP = 23;
+  prof = 4;
   rank = "Lord IV";
   
   generalOutput();
@@ -264,6 +284,7 @@ buttonLor4.onclick = function() {
 buttonLor5.onclick = function() { 
   available = 72;
   THP = 25;
+  prof = 4;
   rank = "Lord V";
   
   generalOutput();
@@ -272,6 +293,7 @@ buttonLor5.onclick = function() {
 buttonDar1.onclick = function() { 
   available = 75;
   THP = 30;
+  prof = 4;
   rank = "Darth I";
 
   generalOutput();
@@ -279,6 +301,7 @@ buttonDar1.onclick = function() {
 buttonDar2.onclick = function() { 
   available = 80;
   THP = 35;
+  prof = 5;
   rank = "Darth II";
   
   generalOutput();
@@ -286,6 +309,7 @@ buttonDar2.onclick = function() {
 buttonDar3.onclick = function() { 
   available = 85;
   THP = 40;
+  prof = 5;
   rank = "Darth III";
 
   generalOutput();
@@ -381,8 +405,9 @@ function changeLevel(stat, add) {
   EHP = (THP + curmods[2]) * 4;
   EHPoutput.textContent = EHP;
 
-  INI = curmods[1];
+  INI = curmods[1] + curmods[4];
   INIoutput.textContent = INI;
+  INPoutput.textContent = INI + prof;
 
   DEF = 10 + curmods[1];
   DEFoutput.textContent = DEF;
@@ -522,8 +547,9 @@ rankOutput.textContent = rank;
 
 EHPoutput.textContent = EHP;
 
-INI = curmods[1];
+INI = curmods[1] + curmods[4];
 INIoutput.textContent = INI;
+INPoutput.textContent = INI + prof;
 
 DEF = 10 + curmods[1];
 DEFoutput.textContent = DEF;
