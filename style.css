@@ -1,9 +1,8 @@
 body {
+  font-family: Arial, sans-serif;
   margin-left: 5%;
-}
-
-h1 {
-  margin-left: -3%;
+  padding: 0;
+  background-color: #F0F0F0;
 }
 
 td {
@@ -14,4 +13,105 @@ td {
 
 .text {
   width: 100px;
+}
+
+
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: -3%;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input, .select, .skill {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  display: inline;
+  margin: 0;
+  padding: 3px 7px;
+  background-color: none;
+  color: #000;
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sk_but_minu:hover {
+  background-color: rgba(255, 0, 0, 0.2); /* red tint */
+}
+
+.sk_but_plus:hover {
+  background-color: rgba(000, 128, 0, 0.2); /* red tint */
+}
+
+.grid-container {
+  width: 220px;
+  margin-left: 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 10px;
+  row-gap: 20px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.text {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+
+#hp_hover #hp_tooltip, #def_hover #def_tooltip, #res_hover #res_tooltip, #in_hover #in_tooltip {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-right: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: max-content;
+}
+
+#hp_hover, #def_hover, #res_hover, #in_hover {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  margin-bottom: auto;
+}
+
+#hp_hover:hover #hp_tooltip, #def_hover:hover #def_tooltip, #res_hover:hover #res_tooltip, #in_hover:hover #in_tooltip {
+  visibility: visible;
+  opacity: 1;
+  font-size: 12px;
 }

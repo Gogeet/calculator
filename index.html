@@ -1,99 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>SWTOR Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<h1>Skill points calculator</h1>
-	
-	<button onclick="addButton(1);">Acolyte</button>
-	<button onclick="addButton(2);">Neophyte</button>
-  <button onclick="addButton(3);">Apprentice</button>
-  <button onclick="addButton(4);">Lord</button>
-  <button onclick="addButton(5);">Darth</button>
+	<header>
+    <h1>Skill points calculator</h1>
+  </header>
+	<main>
+  <section id="rank_buttons" class="button"></section>
+
+  <br />
+
+  <section id="level_buttons">
+  </section>
+
+  <section id="skill_selection">
+    <p><span id="rank"></span> | Points: <span id="used"></span>/<span id="available"></span></p>
+   
+    <article class="grid-container">
+      <div class="grid">
+        <div>
+          <button id="strREM" class="sk_but_minu">-</button>
+        </div>
+        <div class="text">
+          STR: <span id="STRlevel"></span> (<span id="STRmod"></span>)
+        </div>
+        <div>
+          <button id="strADD" class="sk_but_plus">+</button>
+        </div>
+
+        <div>
+          <button id="dexREM" class="sk_but_minu">-</button>
+        </div>
+        <div class="text">
+          DEX: <span id="DEXlevel"></span> (<span id="DEXmod"></span>)
+        </div>
+        <div>
+          <button id="dexADD" class="sk_but_plus">+</button>
+        </div>
+
+        <div>
+          <button id="conREM" class="sk_but_minu">-</button>
+        </div>
+        <div class="text">
+          CON: <span id="CONlevel"></span> (<span id="CONmod"></span>)
+        </div>
+        <div>
+          <button id="conADD" class="sk_but_plus">+</button>
+        </div>
+
+        <div>
+          <button id="intREM" class="sk_but_minu">-</button>
+        </div>
+        <div class="text">
+          INT: <span id="INTlevel"></span> (<span id="INTmod"></span>)
+        </div>
+        <div>
+          <button id="intADD" class="sk_but_plus">+</button>
+        </div>
+
+        <div>
+          <button id="wilREM" class="sk_but_minu">-</button>
+        </div>
+        <div class="text">
+          WIL: <span id="WILlevel"></span> (<span id="WILmod"></span>)
+        </div>
+        <div>
+          <button id="wilADD" class="sk_but_plus">+</button>
+        </div>
+
+        <div>
+          <button id="chaREM" class="sk_but_minu">-</button>
+        </div>
+        <div class="text">
+          CHA: <span id="CHAlevel"></span> (<span id="CHAmod"></span>)
+        </div>
+        <div>
+          <button id="chaADD" class="sk_but_plus">+</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="otherStats">
+    <p id="hp_hover">HP: <span id="hp"></span><span id="hp_tooltip">4 * (Title HP + CON)</span></p>
+    <br />
+    <p id="def_hover">DEFENSE: <span id="def"></span> + Bonuses<span id="def_tooltip">10 + DEX + Bonuses</span></p>
+    <br />
+    <p id="res_hover">RESISTANCE: <span id="res"></span><span id="res_tooltip">10 + WILL + CHA</span></p>
+    <br />
+    <p id="in_hover">INITIATIVE: <span id="ini"></span> <span id="note">(<span id="iniProf"></span> if Proficient in Force Sense)</span><span id="in_tooltip">DEX + WILL (Prof: +<span id="prof"></span>)</span></p>
+  </section>
 	<br><br>
-	<div id="buttons">
-	</div>
-
-  <p><span id="rank"></span> | Points: <span id="used"></span>/<span id="available"></span></p>
-
-  <table>
-    <tr>
-      <td>
-        <button id="strREM">-</button>
-      </td>
-      <td class="text">
-        STR: <span id="STRlevel"></span> (<span id="STRmod"></span>)
-      </td>
-      <td>
-        <button id="strADD">+</button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button id="dexREM">-</button>
-      </td>
-      <td class="text">
-        DEX: <span id="DEXlevel"></span> (<span id="DEXmod"></span>)
-      </td>
-      <td>
-        <button id="dexADD">+</button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button id="conREM">-</button>
-      </td>
-      <td class="text">
-        CON: <span id="CONlevel"></span> (<span id="CONmod"></span>)
-      </td>
-      <td>
-        <button id="conADD">+</button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button id="intREM">-</button>
-      </td>
-      <td class="text">
-        INT: <span id="INTlevel"></span> (<span id="INTmod"></span>)
-      </td>
-      <td>
-        <button id="intADD">+</button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button id="wilREM">-</button>
-      </td>
-      <td class="text">
-        WIL: <span id="WILlevel"></span> (<span id="WILmod"></span>)
-      </td>
-      <td>
-        <button id="wilADD">+</button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button id="chaREM">-</button>
-      </td>
-      <td class="text">
-        CHA: <span id="CHAlevel"></span> (<span id="CHAmod"></span>)
-      </td>
-      <td>
-        <button id="chaADD">+</button>
-      </td>
-    </tr>
-  </table>
-
-  <div id="otherStats">
-    <p>HP: <span id="hp"></span></p>
-    <p>DEFENSE: <span id="def"></span> + Bonuses</p>
-    <p>RESISTANCE: <span id="res"></span></p>
-    <p>INITIATIVE: <span id="ini"></span> (DEX + WILL: <span id="iniProf"></span> if Proficient in Force Sense)</p>
-  </div>
-
+  </main>
   <script defer src="buttons.js"></script>
 </body>
 </html>
