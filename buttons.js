@@ -84,6 +84,9 @@ const skill_buttons = [
 	[document.getElementById("chaADD"), document.getElementById("chaREM")]
 ]
 
+const reset_button = document.getElementById("reset");
+reset_button.innerHTML = "RESET POINTS";
+
 for (let i = 0; i < 6; i++) {
 	skill_buttons[i][0].innerHTML = "+";
 	skill_buttons[i][1].innerHTML = "-";
@@ -99,6 +102,12 @@ const rank_buttons = [
 ];
 
 function text_refresh() {
+	if (used > available) {
+		USoutput.style.color = "red";
+	} else {
+		USoutput.style.color = "black";
+	}
+
 	rankOutput.textContent = rank;
 
 	EHP = 4 * (THP + curmods[2]);
@@ -117,6 +126,20 @@ function text_refresh() {
 	AVoutput.textContent = available;
 	USoutput.textContent = used;
 	profOutput.textContent = prof;
+
+	for(let i = 0; i < abilityLevels.length; i++) {
+		abilityLevels[i][0].textContent = lvls[i];
+		abilityLevels[i][1].textContent = curmods[i];
+	}
+}
+
+function reset_skills() {
+	index = [0, 0, 0, 0, 0, 0];
+	lvls = [8, 8, 8, 8, 8, 8];
+	curmods = [-1, -1, -1, -1, -1, -1];
+	used = 0;
+
+	text_refresh();
 }
 
 for (let i = 0; i < rank_buttons.length; i++) {
@@ -133,6 +156,16 @@ for (let i = 0; i < rank_buttons.length; i++) {
 	document.getElementById("rank_buttons").appendChild(rank_buttons[i]);
 }
 
+reset_button.addEventListener("mouseleave", () => {
+	reset_button.style.backgroundColor = '#F0F0F0'; });
+reset_button.addEventListener("mouseenter", () => {
+	reset_button.style.backgroundColor = 'rgba(128, 128, 128, 0.5)';
+});
+
+reset_button.addEventListener("click", function() {
+	reset_skills();
+});
+
 for (let i = 0; i < rank_buttons.length; i++) {
 	rank_buttons[i].addEventListener("mouseleave", () => {
 		rank_buttons[i].style.backgroundColor = '#F0F0F0';
@@ -144,12 +177,7 @@ for (let i = 0; i < rank_buttons.length; i++) {
 	rank_buttons[i].addEventListener("click", function() {
 		addButton(i);
 	});
-	if (used > available) {
-		USoutput.style.color = "red";
-	} else {
-		USoutput.style.color = "black";
-	}
-
+	
 	text_refresh();
 }
 
@@ -208,11 +236,6 @@ for (let i = 0; i < level_buttons.length; i++) {
 			AVoutput.textContent = available;
 			prof = profs[i][j];
 			rank = ranks[i] + level_text[j];
-			if (used > available) {
-				USoutput.style.color = "red";
-			} else {
-				USoutput.style.color = "black";
-			}
 
 			text_refresh();
 		})
@@ -235,14 +258,6 @@ function changeLevel(stat, add) {
 			curmods[stat] = mods[index[stat]];
 		}
 	}
-
-	if (used > available) {
-		USoutput.style.color = "red";
-	} else {
-		USoutput.style.color = "black";
-	}
-
-	USoutput.textContent = used;
 
 	for (let i = 0; i < abilityLevels.length; i++) {
 		abilityLevels[i][0].textContent = lvls[i];

@@ -53,11 +53,11 @@ button {
 }
 
 .sk_but_minu:hover {
-  background-color: rgba(255, 0, 0, 0.2); /* red tint */
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .sk_but_plus:hover {
-  background-color: rgba(000, 128, 0, 0.2); /* red tint */
+  background-color: rgba(000, 128, 0, 0.2);
 }
 
 .grid-container {
@@ -65,15 +65,22 @@ button {
   margin-left: 10%;
 }
 
+#reset {
+  margin: 0 auto;
+  grid-column: 2 / 3;
+  justify-self: center;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
   row-gap: 20px;
 }
 
 .cell {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 10px;
 }
@@ -83,6 +90,7 @@ button {
   width: 120px;
   text-align: center;
   padding: 0 12px;
+  justify-self: center;
 }
 
 
